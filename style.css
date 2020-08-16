@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #5fbaa7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+p {
+    text-align: center;
+    display: block;
+}
+
+ul > li { 
+    justify-content: space-between;
+    display: list-item;
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+li img {
+    width: 5rem;
+    border-radius: 1rem;
+}
+
+div#googleMap{
+    width: 350px;
+    height: 400px;
+    background-color: grey;
+    display: none;
+}
+
+.get-country {
+    display: flex;
+    flex-wrap: wrap;
+    border: black 2px solid;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: goldenrod;
+    color: white;
+    text-align: center;
+}
+
+
+@media all and (min-width:900px) {
+    ul > li { 
+        font-size: 1rem;
+    }
+    li img {
+        width: 9rem;
+        /* float: right; */
+    }
+    div#googleMap{
+        width: 350px;
+        height: 300px;
+        background-color: grey;
+        display: block;
+        flex-basis: 100%;
+    }
+    select#country {
+        margin: auto 1px;
+    }  
+    div.results {
+        margin: auto;
+    }
+    p.hidden {
+        display: none;
+    }
+}
